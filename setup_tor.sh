@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install gpg dirmngr apt-transport-https apt-key curl -y
+apt-get install gpg dirmngr apt-transport-https curl -y
 
 echo 'deb https://deb.torproject.org/torproject.org focal main' >> /etc/apt/sources.list
 echo 'deb-src https://deb.torproject.org/torproject.org focal main' >> /etc/apt/sources.list
