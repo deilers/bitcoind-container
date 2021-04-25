@@ -1,0 +1,13 @@
+FROM ubuntu:focal
+
+WORKDIR /tmp
+
+RUN useradd -ms /usr/sbin/nologin bitcoin
+
+COPY setup_tor.sh .
+RUN chmod +x ./setup_tor.sh
+RUN ./setup_tor.sh
+
+COPY setup_btc_pi.sh .
+RUN chmod +x ./setup_btc_pi.sh
+RUN ./setup_btc_pi.sh
